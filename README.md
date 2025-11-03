@@ -25,8 +25,12 @@ opam install coq-compcert.3.15
 opam install coq-vst.2.15
 clightgen -normalize -o vst_test1.v test.c
 
+# Credits
+Collaboration between [Noah Schwartz](https://github.com/NoahBSchwartz) and [Tyler Onstad-Cran](https://github.com/Tyler-oc)
+
 # Frama Setup
 opam install frama-c alt-ergo
 little problems: frama-c -wp -wp-status-all -wp-rte -wp-prover z3 frama_test_max_array.c
 big boy problems: frama-c -wp -wp-rte -wp-prover z3,alt-ergo,cvc5 -wp-par 4 -wp-timeout 15 frama_test3_fac2.c
+
 (Currently testing this benchmark: https://github.com/cverified/cbench)
