@@ -1,0 +1,3 @@
+(library
+ (name compcert_wrapper)
+ (libraries))  ; No external libraries needed
